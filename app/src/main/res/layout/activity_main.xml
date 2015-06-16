@@ -11,10 +11,49 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/addItUp"
         android:id="@+id/callNativeButton"
+        android:layout_marginTop="103dp"
+        android:layout_below="@+id/valueOne"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/valueOne"
         android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/callNativeButton"
+        android:layout_toStartOf="@+id/callNativeButton"
+        android:layout_marginTop="46dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/valueTwo"
+        android:layout_alignBottom="@+id/valueOne"
+        android:layout_toRightOf="@+id/callNativeButton"
+        android:layout_toEndOf="@+id/callNativeButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/plusSign"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/valueOne"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/resultText"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="42dp"/>
 
 </RelativeLayout>

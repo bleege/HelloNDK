@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HelloNDK</string>
+    <string name="addItUp">Add The Numbers!</string>
+    <string name="plusSign">+</string>
+    <string name="resultLabel">Sum Result:</string>
 </resources>

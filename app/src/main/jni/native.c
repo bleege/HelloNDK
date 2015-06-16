@@ -13,3 +13,27 @@ void Java_com_bradleege_hellondk_MainActivity_helloLog(JNIEnv * env, jobject thi
 
     (*env)->ReleaseStringUTFChars(env, logThis, szLogThis);
 }
+
+
+jstring Java_com_bradleege_hellondk_MainActivity_getString(JNIEnv * env, jobject this, jint value1, jint value2)
+{
+    char *szFormat = "The sum is: %i";
+    char *szResult;
+
+    // add the two values
+    jlong sum = value1+value2;
+
+    // malloc room for the resulting string
+    szResult = malloc(sizeof(szFormat) + 20);
+
+    // standard sprintf
+    sprintf(szResult, szFormat, sum);
+
+    // get an object string
+    jstring result = (*env)->NewStringUTF(env, szResult);
+
+    // cleanup
+    free(szResult);
+
+    return result;
+}
